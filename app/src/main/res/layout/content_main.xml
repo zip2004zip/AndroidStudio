@@ -33,4 +33,13 @@
         android:layout_below="@+id/textId"
         android:layout_alignLeft="@+id/textId"
         android:layout_alignStart="@+id/textId" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Activity1"
+        android:id="@+id/newActivity1Button"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp" />
 </RelativeLayout>
