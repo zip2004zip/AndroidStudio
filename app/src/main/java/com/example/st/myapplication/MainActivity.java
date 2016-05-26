@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.fab:
-                //  textView.setTextColor(Color.BLUE);
                 final TextView textView = (TextView) findViewById(R.id.textId);
+                //  textView.setTextColor(Color.BLUE);
                 textView.setTextColor(getResources().getColor(R.color.colorTextPosleNazhatia));  //изменяем цвет текста после нажатия
                 textView.setBackgroundColor(getResources().getColor(R.color.colorFonPosleNazhatia)); // изменяем фон текста после нажатия
                 EditText editText = (EditText) findViewById(R.id.editText);
