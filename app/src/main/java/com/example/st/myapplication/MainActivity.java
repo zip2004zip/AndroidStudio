@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 EditText editText = (EditText) findViewById(R.id.editText);
                 textView.setText(editText.getText());
                 textView.setText("Text v MainActivity"); // изменяем текст после нажатия
-                Toast.makeText(this, "текст изменен успешно", Toast.LENGTH_LONG).show(); // всплываемое оно
+                Toast.makeText(this, "текст изменен успешно!", Toast.LENGTH_LONG).show(); // всплываемое оно
                 Log.d("TAG", "msg d");
                 Log.e("TAG", "msg e");
                 break;
