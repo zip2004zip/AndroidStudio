@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button button = (Button) findViewById(R.id.newActivity1Button);
         button.setOnClickListener(this);
+
+        Button button1 = (Button) findViewById(R.id.buttonCalculator);
+        button1.setOnClickListener(this);
     }
 
     @Override
@@ -51,7 +54,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.newActivity1Button:
                 Intent intent = new Intent(this, Main2Activity.class);
-
+                startActivity(intent);
+                break;
+            case R.id.buttonCalculator:
+                intent = new Intent(this, CalculatorActivity.class);
                 startActivity(intent);
                 break;
         }
