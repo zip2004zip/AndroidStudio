@@ -43,13 +43,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 textView.setBackgroundColor(getResources().getColor(R.color.colorFonPosleNazhatia)); // изменяем фон текста после нажатия
                 EditText editText = (EditText) findViewById(R.id.editText);
                 textView.setText(editText.getText());
-                textView.setText("Text v MainActivity"); // изменяем текст после нажатия
+              //  textView.setText("Text v MainActivity"); // изменяем текст после нажатия кнопки
+                editText.setText(""); // очищаем текс в EditText
                 Toast.makeText(this, "текст изменен успешно!", Toast.LENGTH_LONG).show(); // всплываемое оно
                 Log.d("TAG", "msg d");
                 Log.e("TAG", "msg e");
                 break;
             case R.id.newActivity1Button:
                 Intent intent = new Intent(this, Main2Activity.class);
+
                 startActivity(intent);
                 break;
         }

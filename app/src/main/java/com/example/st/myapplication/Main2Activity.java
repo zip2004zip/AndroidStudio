@@ -6,8 +6,11 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,16 @@ public class Main2Activity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        Button button = (Button) findViewById(R.id.button3);
+        button.setOnClickListener(this);
+
     }
 
+    @Override
+    public void onClick(View v) {
+        final EditText editText = (EditText) findViewById(R.id.editText2forButt3);
+        Toast.makeText(this, editText.getText(), Toast.LENGTH_LONG).show();
+        editText.setText("");
+    }
 }
