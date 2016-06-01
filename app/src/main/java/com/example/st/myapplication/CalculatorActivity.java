@@ -11,3 +11,8 @@ public class CalculatorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calculator);
     }
 }
+
+
+// cybern.ru/calcjava.html
+// javatalks.ru/topics/8142
+// pro-java.ru/gotovye-programmy-java/prostoj-kalkulyator-na-java/
