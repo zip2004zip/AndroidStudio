@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -44,9 +43,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //  textView.setTextColor(Color.BLUE);
                 textView.setTextColor(getResources().getColor(R.color.colorTextPosleNazhatia));  //изменяем цвет текста после нажатия
                 textView.setBackgroundColor(getResources().getColor(R.color.colorFonPosleNazhatia)); // изменяем фон текста после нажатия
+
                 EditText editText = (EditText) findViewById(R.id.editText);
                 textView.setText(editText.getText());
-              //  textView.setText("Text v MainActivity"); // изменяем текст после нажатия кнопки
+
+                //  textView.setText("Text v MainActivity"); // изменяем текст после нажатия кнопки
                 editText.setText(""); // очищаем текс в EditText
                 Toast.makeText(this, "текст изменен успешно!", Toast.LENGTH_LONG).show(); // всплываемое оно
                 Log.d("TAG", "msg d");
@@ -62,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
+
 
     @Override
     protected void onStart() {

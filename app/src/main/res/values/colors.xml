@@ -5,4 +5,10 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorTextPosleNazhatia">#40ff46</color>
     <color name="colorFonPosleNazhatia">#e91d20</color>
+    <color name="colorButtonCalculatorNumber">#3d3d3d</color>
+    <color name="colorButtonCalculatorArithmetic">#6b6b6b</color>
+    <color name="colorButtonCalculatorEquals">#3F51B5</color>
+    <color name="colorButtonCalculatorCleaning">#b5573f</color>
+    <color name="colorButtonCalculatorText">#000000</color>
+
 </resources>
