@@ -8,13 +8,19 @@ import android.widget.EditText;
 
 public class CalculatorActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private EditText editText;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
 
-        EditText editText = (EditText) findViewById(R.id.editText2);
-        editText.getText();
+        editText = (EditText) findViewById(R.id.editText2);
+       // editText.getText();
+
+       // Button buttonSum = (Button) findViewById(R.id.buttonSum);
+      //  buttonSum.setOnClickListener(this);
 
     }
 
@@ -31,13 +37,50 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
             }
 
             case R.id.buttonC: {
+                editText.setText("0");
+                break;
+            }
+
+            case R.id.buttonDelete: {
 
                 break;
             }
 
+            case R.id.buttonComma: {
 
+                break;
+            }
+
+            case R.id.buttonResult: {
+
+                break;
+            }
+
+            default: {
+
+                editText.setText(editText.getText() + v.getContentDescription().toString());
+            }
         }
+    }
+}
 
+
+class CalculatorOperations {
+
+    public static double sum(double a, double b) {
+        return a + b;
+    }
+
+    public static double minus(double a, double b) {
+        return a - b;
+    }
+
+    public static double multiply(double a, double b) {
+        return a * b;
+    }
+
+    public static double divide(double a, double b) {
+        return a / b;
     }
 }
 
