@@ -20,10 +20,10 @@
         </activity>
         <activity
             android:name=".Main2Activity"
-            android:label="@string/app_name"
+            android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".CalculatorActivity"
+            android:name=".CalculatorPackage.CalculatorActivity"
             android:label="@string/title_activity_calculator">
             </activity>
     </application>

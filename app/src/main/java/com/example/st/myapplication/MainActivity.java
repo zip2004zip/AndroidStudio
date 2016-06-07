@@ -1,7 +1,6 @@
 package com.example.st.myapplication;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.st.myapplication.CalculatorPackage.CalculatorActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
