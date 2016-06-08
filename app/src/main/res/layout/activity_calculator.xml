@@ -297,7 +297,7 @@
             android:backgroundTint="@color/colorButtonCalculatorNumber"
             android:textColor="@color/colorButtonCalculatorText"
             android:onClick="onClick"
-            android:contentDescription="," />
+            android:contentDescription="." />
 
     </GridLayout>
 
