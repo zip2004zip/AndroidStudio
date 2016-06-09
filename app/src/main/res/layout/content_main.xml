@@ -28,7 +28,7 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/editTextSurname"
         android:layout_marginTop="83dp"
         android:layout_below="@+id/textId"
         android:layout_alignLeft="@+id/textId"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:text="New Activity1"
         android:id="@+id/newActivity1Button"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/editTextSurname"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="79dp" />
 

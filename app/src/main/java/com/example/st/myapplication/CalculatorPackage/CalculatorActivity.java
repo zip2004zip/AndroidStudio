@@ -101,16 +101,16 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
                 // editText.setText("");
                 switch (operations) {
                     case SUMMA:
-                        if (a + b % 1 == 0) {
-                            editText.setText(String.valueOf((int) a + b));
+                        if ((a + b) % 1 == 0) {
+                            editText.setText(String.valueOf((int) (a + b)));
                         } else {
                             editText.setText(String.valueOf(a + b));
                         }
                         break;
 
                     case MINUS:
-                        if (a - b % 1 == 0) {
-                            editText.setText(String.valueOf((int) a - b));
+                        if ((a - b) % 1 == 0) {
+                            editText.setText(String.valueOf((int) (a - b)));
                         } else {
                             editText.setText(String.valueOf(a - b));
                         }
@@ -121,16 +121,16 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
                             Toast.makeText(this, "На ноль делить нельзя!\nВведите число еще раз", Toast.LENGTH_LONG).show();
                             return;
                         }
-                        if (a / b % 1 == 0) {
-                            editText.setText(String.valueOf((int) a / b));
+                        if ((a / b) % 1 == 0) {
+                            editText.setText(String.valueOf((int) (a / b)));
                         } else {
                             editText.setText(String.valueOf(a / b));
                         }
                         break;
 
                     case MULTIPLY:
-                        if (a * b % 1 == 0) {
-                            editText.setText(String.valueOf((int) a * b));
+                        if ((a * b) % 1 == 0) {
+                            editText.setText(String.valueOf((int) (a * b)));
                         } else {
                             editText.setText(String.valueOf(a * b));
                         }
@@ -150,25 +150,6 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
     }
 }
 
-
-class CalculatorOperations {
-
-    public static double sum(double a, double b) {
-        return a + b;
-    }
-
-    public static double minus(double a, double b) {
-        return a - b;
-    }
-
-    public static double multiply(double a, double b) {
-        return a * b;
-    }
-
-    public static double divide(double a, double b) {
-        return a / b;
-    }
-}
 
 
 // cybern.ru/calcjava.html

@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 textView.setTextColor(getResources().getColor(R.color.colorTextPosleNazhatia));  //изменяем цвет текста после нажатия
                 textView.setBackgroundColor(getResources().getColor(R.color.colorFonPosleNazhatia)); // изменяем фон текста после нажатия
 
-                EditText editText = (EditText) findViewById(R.id.editText);
+                EditText editText = (EditText) findViewById(R.id.editTextSurname);
                 textView.setText(editText.getText());
 
                 //  textView.setText("Text v MainActivity"); // изменяем текст после нажатия кнопки
