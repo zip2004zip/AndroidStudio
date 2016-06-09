@@ -73,8 +73,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:text="4. Сколько ночей"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:text="4. Количество ночей"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:singleLine="true" />
 
             <TextView
                 android:id="@+id/textViewSex"
