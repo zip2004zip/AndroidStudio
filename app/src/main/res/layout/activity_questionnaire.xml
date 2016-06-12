@@ -16,66 +16,96 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextName"
+                android:id="@+id/editText_FirstName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="1. Имя" />
+                android:hint="1. Имя"
+                android:inputType="text" />
 
             <EditText
-                android:id="@+id/editTextSurname"
+                android:id="@+id/editText_LastName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="2. Фамилия" />
+                android:hint="2. Фамилия"
+                android:inputType="text" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
             <TextView
-                android:id="@+id/textViewDateTime"
+                android:id="@+id/textView_DateTime"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="3. Дата и время заезда"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/textViewDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="date"
-                    android:text="Дата"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:layout_weight="1"
-                    android:layout_marginLeft="5dp" />
 
                 <TextView
-                    android:id="@+id/textViewTime"
+                    android:id="@+id/textView_Date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="time"
-                    android:text="Время"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_marginLeft="5dp"
                     android:layout_weight="1"
-                    android:layout_marginLeft="5dp" />
+                    android:hint="Дата"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/textView_Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:hint="Время"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
             </LinearLayout>
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
             <TextView
                 android:id="@+id/textViewNight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:singleLine="true"
                 android:text="4. Количество ночей"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:singleLine="true" />
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <SeekBar
+                    android:id="@+id/seekBar_nights"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textView_nights"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
             <TextView
                 android:id="@+id/textViewSex"
@@ -89,54 +119,77 @@
                 android:layout_height="match_parent">
 
                 <RadioButton
-                    android:id="@+id/radioButtonM"
+                    android:id="@+id/radioButton_M"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="М" />
 
                 <RadioButton
-                    android:id="@+id/radioButtonG"
+                    android:id="@+id/radioButton_F"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Ж" />
             </RadioGroup>
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
             <TextView
-                android:id="@+id/textViewFood"
+                android:id="@+id/textView_Food"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="6. Питание"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <CheckBox
-                android:id="@+id/checkBoxBreakfast"
+                android:id="@+id/checkBox_Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Завтрак" />
 
             <CheckBox
-                android:id="@+id/checkBox4"
+                android:id="@+id/checkBox_Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Обед" />
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBox_Supper"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ужин" />
 
             <CheckBox
-                android:id="@+id/checkBox3"
+                android:id="@+id/checkBox_FullBoard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Все включено" />
 
-            <Spinner
-                android:id="@+id/spinnerCity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
+            <Spinner
+                android:id="@+id/spinner_City"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick" />
+
+            <EditText
+                android:id="@+id/editText_Suggestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ваши пожелания..."
+                android:onClick="onClick"
+                android:scrollbars="vertical" />
+
+            <Button
+                android:id="@+id/button_Send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="@string/questionnaire_button_send" />
         </LinearLayout>
     </ScrollView>
 
