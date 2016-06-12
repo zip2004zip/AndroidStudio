@@ -9,6 +9,6 @@
     <color name="colorButtonCalculatorArithmetic">#6b6b6b</color>
     <color name="colorButtonCalculatorEquals">#3F51B5</color>
     <color name="colorButtonCalculatorCleaning">#b5573f</color>
-    <color name="colorButtonCalculatorText">#000000</color>
+    <color name="colorButtonCalculatorText">#ffffff</color>
 
 </resources>
