@@ -62,6 +62,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_weight="1"
                     android:hint="Дата"
+                    android:inputType="date"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
                 <TextView
@@ -71,6 +72,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_weight="1"
                     android:hint="Время"
+                    android:inputType="time"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
             </LinearLayout>
 
@@ -92,15 +94,24 @@
                 android:orientation="horizontal">
 
                 <SeekBar
-                    android:id="@+id/seekBar_night"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content" />
+                    android:id="@+id/seekBar_nights"
+                    android:layout_width="248dp"
+                    android:layout_height="26dp"
+                    android:background="@drawable/questionnaire_edittext_suggestion"
+                    android:max="31"
+                    android:progress="1" />
 
                 <TextView
-                    android:id="@+id/textView_nights"
+                    android:id="@+id/textView_nights_seekBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/questionnaire_edittext_suggestion"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <Space
@@ -122,12 +133,14 @@
                     android:id="@+id/radioButton_M"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onClick"
                     android:text="М" />
 
                 <RadioButton
                     android:id="@+id/radioButton_F"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onClick"
                     android:text="Ж" />
             </RadioGroup>
 
@@ -146,24 +159,28 @@
                 android:id="@+id/checkBox_Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onClick"
                 android:text="Завтрак" />
 
             <CheckBox
                 android:id="@+id/checkBox_Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onClick"
                 android:text="Обед" />
 
             <CheckBox
                 android:id="@+id/checkBox_Supper"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onClick"
                 android:text="Ужин" />
 
             <CheckBox
                 android:id="@+id/checkBox_FullBoard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onClick"
                 android:text="Все включено" />
 
             <Space
@@ -173,7 +190,9 @@
             <Spinner
                 android:id="@+id/spinner_City"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:entries="@array/citylist"
+                android:spinnerMode="dialog" />
 
             <Space
                 android:layout_width="match_parent"
