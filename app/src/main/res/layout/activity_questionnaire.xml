@@ -79,7 +79,7 @@
                 android:layout_height="10dp" />
 
             <TextView
-                android:id="@+id/textViewNight"
+                android:id="@+id/textView_Night"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
@@ -92,7 +92,7 @@
                 android:orientation="horizontal">
 
                 <SeekBar
-                    android:id="@+id/seekBar_nights"
+                    android:id="@+id/seekBar_night"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content" />
 
@@ -173,23 +173,33 @@
             <Spinner
                 android:id="@+id/spinner_City"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="onClick" />
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
             <EditText
                 android:id="@+id/editText_Suggestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/questionnaire_edittext_suggestion"
                 android:hint="Ваши пожелания..."
                 android:onClick="onClick"
+                android:padding="5dp"
                 android:scrollbars="vertical" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
             <Button
                 android:id="@+id/button_Send"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onClick"
-                android:text="@string/questionnaire_button_send" />
+                android:text="@string/questionnaire_button_send"
+                android:textSize="20sp" />
         </LinearLayout>
     </ScrollView>
 
