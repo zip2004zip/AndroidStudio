@@ -187,6 +187,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
 
+            <TextView
+                android:id="@+id/textView_City"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7. Выберите город"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
             <Spinner
                 android:id="@+id/spinner_City"
                 android:layout_width="wrap_content"
@@ -203,7 +210,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/questionnaire_edittext_suggestion"
-                android:hint="Ваши пожелания..."
+                android:hint="8. Ваши пожелания..."
                 android:onClick="onClick"
                 android:padding="5dp"
                 android:scrollbars="vertical" />

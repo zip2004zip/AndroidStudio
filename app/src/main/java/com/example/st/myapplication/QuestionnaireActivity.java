@@ -10,15 +10,28 @@ import android.widget.TextView;
 
 public class QuestionnaireActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText editText;
-    Button buttonSend;
-    private static SeekBar seekBar;
-    private static TextView textView_seekBar;
+    private EditText editText_Suggestion;
+    private EditText editText_FirstName;
+    private EditText editText_LastName;
+
+    private TextView textView_Date;
+    private TextView textView_Time;
+
+    private Button buttonSend;
+    private SeekBar seekBar;
+    private TextView textView_seekBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire);
+
+        // editText_FirstName editText_LastName
+        editText_FirstName = (EditText) findViewById(R.id.editText_FirstName);
+        editText_LastName = (EditText) findViewById(R.id.editText_LastName);
+
+        textView_Date = (TextView) findViewById(R.id.textView_Date);
+        textView_Time = (TextView) findViewById(R.id.textView_Time);
 
         // SeekBar
         seekBar = (SeekBar) findViewById(R.id.seekBar_nights);
@@ -26,7 +39,7 @@ public class QuestionnaireActivity extends AppCompatActivity implements View.OnC
         seekBar();
 
         // пожелания
-        editText = (EditText) findViewById(R.id.editText_Suggestion);
+        editText_Suggestion = (EditText) findViewById(R.id.editText_Suggestion);
 
         // кнопка отправки
         buttonSend = (Button) findViewById(R.id.button_Send);
