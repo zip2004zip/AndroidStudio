@@ -26,7 +26,7 @@
             android:name=".CalculatorPackage.CalculatorActivity"
             android:label="@string/title_activity_calculator">
         </activity>
-        <activity android:name=".QuestionnaireActivity">
+        <activity android:name=".Quesionnaire.QuestionnaireActivity">
         </activity>
     </application>
 
