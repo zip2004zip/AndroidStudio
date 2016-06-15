@@ -40,7 +40,7 @@
                 android:layout_height="10dp" />
 
             <TextView
-                android:id="@+id/textViewDateTime"
+                android:id="@+id/textViewDateAndTimeOfArrival"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="3. Дата и время заезда"
@@ -61,8 +61,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="1"
+                    android:clickable="true"
                     android:hint="Дата"
-                    android:inputType="date"
+                    android:onClick="onClick"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
                 <TextView
@@ -71,7 +72,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="1"
+                    android:clickable="true"
                     android:hint="Время"
+                    android:onClick="onClick"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
             </LinearLayout>
 
