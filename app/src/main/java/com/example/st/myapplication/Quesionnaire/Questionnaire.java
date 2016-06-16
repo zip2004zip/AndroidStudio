@@ -39,11 +39,8 @@ public class Questionnaire {
         return dateAndTimeOfArrive;
     }
 
-    public void setDateAndTimeOfArrive(GregorianCalendar dateAndTimeOfArrive) {
-      //  this.dateAndTimeOfArrive = dateAndTimeOfArrive;
-        Date date;
-        date = new Date(dateAndTimeOfArrive.getTimeInMillis());
-        this.dateAndTimeOfArrive = date;
+    public void setDateAndTimeOfArrive(Date dateAndTimeOfArrive) {
+        this.dateAndTimeOfArrive = dateAndTimeOfArrive;
     }
 
     public int getNights() {

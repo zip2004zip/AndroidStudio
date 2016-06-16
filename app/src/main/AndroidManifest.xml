@@ -24,10 +24,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CalculatorPackage.CalculatorActivity"
-            android:label="@string/title_activity_calculator">
-        </activity>
-        <activity android:name=".Quesionnaire.QuestionnaireActivity">
-        </activity>
+            android:label="@string/title_activity_calculator"></activity>
+        <activity android:name=".Quesionnaire.QuestionnaireActivity"></activity>
+        <activity android:name=".Quesionnaire.ResultActivity"></activity>
     </application>
 
 </manifest>

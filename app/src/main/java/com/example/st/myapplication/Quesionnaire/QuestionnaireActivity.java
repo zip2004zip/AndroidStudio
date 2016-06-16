@@ -2,6 +2,7 @@ package com.example.st.myapplication.Quesionnaire;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,8 +15,10 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.example.st.myapplication.R;
+import com.google.gson.Gson;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class QuestionnaireActivity extends AppCompatActivity implements View.OnClickListener, RadioGroup.OnCheckedChangeListener, DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
@@ -31,7 +34,6 @@ public class QuestionnaireActivity extends AppCompatActivity implements View.OnC
 
     private SeekBar seekBar;
     private TextView tViewSeekBar;
-
 
 
     private TextView tViewSex;
@@ -88,7 +90,14 @@ public class QuestionnaireActivity extends AppCompatActivity implements View.OnC
             case R.id.buttonSend:
                 Questionnaire questionnaire = createQuestionnaire();
 
+                Gson gson = new Gson();
 
+               String resultJson = gson.toJson(questionnaire);
+
+                Intent intent = new Intent(this, ResultActivity.class);
+                intent.putExtra("Json", resultJson);
+                startActivity(intent);
+                break;
 
         }
     }
@@ -98,10 +107,9 @@ public class QuestionnaireActivity extends AppCompatActivity implements View.OnC
         questionnaire.setFirstName(eTextFirstName.getText().toString());
         questionnaire.setLastName(eTextLastName.getText().toString());
 
-        questionnaire.setDateAndTimeOfArrive(gregorianCalendar);
+        questionnaire.setDateAndTimeOfArrive(new Date(gregorianCalendar.getTimeInMillis()));
 
         questionnaire.setNights(Integer.valueOf(tViewSeekBar.getText().toString()));
-
 
 
         return questionnaire;
@@ -111,8 +119,8 @@ public class QuestionnaireActivity extends AppCompatActivity implements View.OnC
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                // textView_seekBar.setText(String.valueOf(progress) + "дней");
-                tViewSeekBar.setText(progress + " дней");
+                 tViewSeekBar.setText(String.valueOf(progress));
+             //   tViewSeekBar.setText(progress);
             }
 
             @Override
@@ -128,7 +136,7 @@ public class QuestionnaireActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
-        //  radioGroup.setOnCheckedChangeListener(new RadioGroup());
+        // radioGroup.setOnCheckedChangeListener(new RadioGroup());
     }
 
     @Override
