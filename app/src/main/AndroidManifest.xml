@@ -25,8 +25,8 @@
         <activity
             android:name=".CalculatorPackage.CalculatorActivity"
             android:label="@string/title_activity_calculator"></activity>
-        <activity android:name=".Quesionnaire.QuestionnaireActivity"></activity>
-        <activity android:name=".Quesionnaire.ResultActivity"></activity>
+        <activity android:name=".Questionnaire.QuestionnaireActivity"></activity>
+        <activity android:name=".Questionnaire.ResultActivity"></activity>
     </application>
 
 </manifest>

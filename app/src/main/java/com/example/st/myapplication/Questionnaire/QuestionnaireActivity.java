@@ -1,4 +1,4 @@
-package com.example.st.myapplication.Quesionnaire;
+package com.example.st.myapplication.Questionnaire;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;

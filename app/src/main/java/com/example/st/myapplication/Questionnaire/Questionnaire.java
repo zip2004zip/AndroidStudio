@@ -1,7 +1,6 @@
-package com.example.st.myapplication.Quesionnaire;
+package com.example.st.myapplication.Questionnaire;
 
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 /**
  * Created by Sergei on 14.06.2016.
