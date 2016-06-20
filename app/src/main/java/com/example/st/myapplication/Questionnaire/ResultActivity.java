@@ -27,8 +27,10 @@ public class ResultActivity extends AppCompatActivity {
         questionnaire = gson.fromJson(getIntent().getStringExtra("Json"), Questionnaire.class);
 
         List<String> stringList = new ArrayList<>();
-        stringList.add(questionnaire.getFirstName());
+        stringList.add("Имя: " + questionnaire.getFirstName());
         stringList.add(questionnaire.getLastName());
+        stringList.add(questionnaire.getDateAndTimeOfArrive().toString());
+        stringList.add("Ночей: " + String.valueOf(questionnaire.getNights()));
         ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(this, R.layout.list_viev, stringList);
         listView.setAdapter(stringArrayAdapter);
     }
