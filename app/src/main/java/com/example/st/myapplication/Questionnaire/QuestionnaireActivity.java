@@ -92,7 +92,7 @@ public class QuestionnaireActivity extends AppCompatActivity implements View.OnC
 
                 Gson gson = new Gson();
 
-               String resultJson = gson.toJson(questionnaire);
+                String resultJson = gson.toJson(questionnaire);
 
                 Intent intent = new Intent(this, ResultActivity.class);
                 intent.putExtra("Json", resultJson);
@@ -119,8 +119,8 @@ public class QuestionnaireActivity extends AppCompatActivity implements View.OnC
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                 tViewSeekBar.setText(String.valueOf(progress));
-             //   tViewSeekBar.setText(progress);
+                tViewSeekBar.setText(String.valueOf(progress));
+                //   tViewSeekBar.setText(progress);
             }
 
             @Override
@@ -137,6 +137,11 @@ public class QuestionnaireActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         // radioGroup.setOnCheckedChangeListener(new RadioGroup());
+        if (radioGroup.isClickable()) {
+            questionnaire.setSex(getResources().getString(R.string.radio_button_male));
+        } else {
+            questionnaire.setSex(getResources().getString(R.string.radio_button_female));
+        }
     }
 
     @Override

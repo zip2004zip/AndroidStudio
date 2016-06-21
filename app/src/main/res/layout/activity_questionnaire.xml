@@ -136,15 +136,17 @@
                     android:id="@+id/radioButtonMale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:onClick="onClick"
-                    android:text="М" />
+                    android:text="@string/radio_button_male" />
 
                 <RadioButton
                     android:id="@+id/radioButtonFemale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked="false"
                     android:onClick="onClick"
-                    android:text="Ж" />
+                    android:text="@string/radio_button_female" />
             </RadioGroup>
 
             <Space

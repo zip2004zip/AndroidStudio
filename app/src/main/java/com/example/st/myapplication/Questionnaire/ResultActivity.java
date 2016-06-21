@@ -31,6 +31,7 @@ public class ResultActivity extends AppCompatActivity {
         stringList.add(questionnaire.getLastName());
         stringList.add(questionnaire.getDateAndTimeOfArrive().toString());
         stringList.add("Ночей: " + String.valueOf(questionnaire.getNights()));
+        stringList.add(questionnaire.getSex());
         ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(this, R.layout.list_viev, stringList);
         listView.setAdapter(stringArrayAdapter);
     }
