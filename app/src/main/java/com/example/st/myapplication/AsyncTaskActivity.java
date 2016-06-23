@@ -43,7 +43,7 @@ public class AsyncTaskActivity extends AppCompatActivity implements View.OnClick
             @Override
             protected void onProgressUpdate(Integer... values) {
                 super.onProgressUpdate(values);
-                int i = values[0];
+                int i = values[0] * 10;
                 progressBar.setProgress(i);
                 tView.setText(String.valueOf(i));
             }
@@ -54,7 +54,7 @@ public class AsyncTaskActivity extends AppCompatActivity implements View.OnClick
                     for (int i = 0; i < 101; i++) {
                         TimeUnit.SECONDS.sleep(1);
                         publishProgress(i);
-                        if (isCancelled()) break;
+                    //    if (isCancelled()) break;
                     }
 
                 } catch (InterruptedException e) {
