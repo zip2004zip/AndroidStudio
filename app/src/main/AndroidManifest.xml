@@ -30,8 +30,9 @@
         <activity android:name=".Questionnaire.QuestionnaireActivity" />
         <activity android:name=".Questionnaire.ResultActivity" />
         <activity android:name=".AsyncTaskActivity" />
-        <activity android:name=".DownloadImageActivity"></activity>
-        <activity android:name=".Telegram.TelegramActivity"></activity>
+        <activity android:name=".DownloadImageActivity" />
+        <activity android:name=".Telegram.TelegramActivity" />
+        <activity android:name=".SaveToFileActivity"></activity>
     </application>
 
 </manifest>
