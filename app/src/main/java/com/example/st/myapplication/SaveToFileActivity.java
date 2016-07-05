@@ -86,6 +86,17 @@ public class SaveToFileActivity extends AppCompatActivity implements View.OnClic
         }
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        saveToFile(FILENAME);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        openFromFile(FILENAME);
+    }
 }
 
 

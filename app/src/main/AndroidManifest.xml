@@ -32,7 +32,8 @@
         <activity android:name=".AsyncTaskActivity" />
         <activity android:name=".DownloadImageActivity" />
         <activity android:name=".Telegram.TelegramActivity" />
-        <activity android:name=".SaveToFileActivity"></activity>
+        <activity android:name=".SaveToFileActivity" />
+        <activity android:name=".SaveToSharedPreferencesActivity"></activity>
     </application>
 
 </manifest>

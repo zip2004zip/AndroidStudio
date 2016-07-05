@@ -85,12 +85,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, SaveToFileActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.buttonSaveFileSharMain:
+                intent = new Intent(this, SaveToSharedPreferencesActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 
 
 
-    @Override
+    /*@Override
     protected void onStart() {
         super.onStart();
         Toast.makeText(this, "Старт", Toast.LENGTH_SHORT).show();
@@ -124,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onDestroy() {
         super.onDestroy();
         Toast.makeText(this, "Уничтожить", Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
 
     @Override
