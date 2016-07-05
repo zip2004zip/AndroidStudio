@@ -16,6 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.st.myapplication.CalculatorPackage.CalculatorActivity;
+import com.example.st.myapplication.Questionnaire.QuestionnaireActivity;
+import com.example.st.myapplication.Telegram.TelegramActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -61,6 +63,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.buttonCalculator:
                 intent = new Intent(this, CalculatorActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.buttonQuestionnaire:
+                intent = new Intent(this, QuestionnaireActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.buttonTelegram:
+                intent = new Intent(this, TelegramActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.buttonAsyncTask:
+                intent = new Intent(this, AsyncTaskActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.buttonDownloadImage:
+                intent = new Intent(this, DownloadImageActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.buttonSaveToFile:
+                intent = new Intent(this, SaveToFileActivity.class);
                 startActivity(intent);
                 break;
         }
