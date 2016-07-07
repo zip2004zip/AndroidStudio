@@ -1,10 +1,12 @@
-package com.example.st.myapplication;
+package com.example.st.myapplication.Preference;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.st.myapplication.R;
 
 /**
  * Для упрощения работы с группой настроек Android предоставляет специальный тип activity - PreferenceActivity;
+ * Оно умеет читать определенные xml-файлы и создавать из них экран с настройками
  * в папке res создал папку xml в которой создал файл prefsettings.xml
  * в котором создаю свой экран настроек, используя готовые компоненты;
  * android:key: устанавливает ключ настройки в SharedPreferences

@@ -7,6 +7,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Preference.PreferenceActivity">
+    tools:context="com.example.st.myapplication.Preference.SaveToPreferenceActivity">
+
+    <TextView
+        android:id="@+id/textViewSavePreference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="">
+    </TextView>
 
 </RelativeLayout>
