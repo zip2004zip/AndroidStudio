@@ -33,7 +33,8 @@
         <activity android:name=".DownloadImageActivity" />
         <activity android:name=".Telegram.TelegramActivity" />
         <activity android:name=".SaveToFileActivity" />
-        <activity android:name=".SaveToSharedPreferencesActivity"></activity>
+        <activity android:name=".SaveToSharedPreferencesActivity" />
+        <activity android:name=".PreferenceActivity"></activity>
     </application>
 
 </manifest>
