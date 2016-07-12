@@ -1,5 +1,8 @@
 package com.example.st.myapplication.Telegram;
 
+import com.example.st.myapplication.Telegram.data.TelegramGetUpdates;
+import com.google.gson.Gson;
+
 import java.io.IOException;
 
 import okhttp3.OkHttpClient;
@@ -24,7 +27,11 @@ public class TelegramClient {
         return response.body().string();
     }
 
-    protected String getUpdates() throws IOException {
-        return get("https://api.telegram.org/bot172880107:AAEWf0LdTwNt9FkKkAJzodftcHWKHfLZ96w/getUpdates");
+    public TelegramGetUpdates getUpdates() throws IOException {
+        Gson gson = new Gson();
+
+        String json = get("https://api.telegram.org/bot172880107:AAEWf0LdTwNt9FkKkAJzodftcHWKHfLZ96w/getUpdates");
+        TelegramGetUpdates result = gson.fromJson(json, TelegramGetUpdates.class);
+        return result;
     }
 }

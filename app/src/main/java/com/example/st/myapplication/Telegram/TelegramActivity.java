@@ -31,7 +31,7 @@ public class TelegramActivity extends AppCompatActivity implements View.OnClickL
                 TelegramClient telegramClient = new TelegramClient();
 
                 try {
-                    response = telegramClient.getUpdates();
+                    response = String.valueOf(telegramClient.getUpdates());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
