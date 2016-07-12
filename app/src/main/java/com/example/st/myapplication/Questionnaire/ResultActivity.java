@@ -28,10 +28,10 @@ public class ResultActivity extends AppCompatActivity {
 
         List<String> stringList = new ArrayList<>();
         stringList.add("Имя: " + questionnaire.getFirstName());
-        stringList.add(questionnaire.getLastName());
-        stringList.add(questionnaire.getDateAndTimeOfArrive().toString());
+        stringList.add("Фамилия: " + questionnaire.getLastName());
+        stringList.add("Дата и время" + questionnaire.getDateAndTimeOfArrive().toString());
         stringList.add("Ночей: " + String.valueOf(questionnaire.getNights()));
-        stringList.add(questionnaire.getSex());
+       // stringList.add(questionnaire.getSex());
         ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(this, R.layout.list_view, stringList);
         listView.setAdapter(stringArrayAdapter);
     }
