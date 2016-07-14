@@ -1,54 +1,31 @@
 package com.example.st.myapplication.Telegram;
 
-import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.ListView;
 
 import com.example.st.myapplication.R;
+import com.example.st.myapplication.Telegram.data.TelegramResult;
 
-import java.io.IOException;
+import java.util.ArrayList;
+
 
 public class TelegramActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private String response;
-    private TextView tViewTelegram;
-    private AsyncTask<String, Void, String> asyncTask;
-
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_telegram);
 
-        tViewTelegram = (TextView) findViewById(R.id.textViewTelegram);
-        asyncTask = new AsyncTask<String, Void, String>() {
-
-            @Override
-            protected String doInBackground(String... params) {
-
-                TelegramClient telegramClient = new TelegramClient();
-
-                try {
-                    response = String.valueOf(telegramClient.getUpdates());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                return response;
-            }
-
-            @Override
-            protected void onPostExecute(String s) {
-                super.onPostExecute(s);
-
-                tViewTelegram.setText(s);
-            }
-        };
+        listView = (ListView) findViewById(R.id.listViewTelegram);
+        listView.setAdapter(new MessageAdapter(new ArrayList<TelegramResult>(), this));
     }
 
     @Override
     public void onClick(View v) {
-        asyncTask.execute();
+        new AsyncTaskTelegram(this).execute();
     }
 }
