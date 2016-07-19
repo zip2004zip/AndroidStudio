@@ -36,7 +36,8 @@
         <activity android:name=".SaveToSharedPreferencesActivity" />
         <activity android:name=".Preference.PreferenceActivity" />
         <activity android:name=".Preference.SaveToPreferenceActivity" />
-        <activity android:name=".Adapter.AdapterActivity"></activity>
+        <activity android:name=".Adapter.AdapterActivity" />
+        <activity android:name=".Telegram.SendMessageActivity"></activity>
     </application>
 
 </manifest>

@@ -1,15 +1,14 @@
 package com.example.st.myapplication.Telegram;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.st.myapplication.Adapter.Message;
 import com.example.st.myapplication.R;
-import com.example.st.myapplication.Telegram.data.TelegramMessage;
 import com.example.st.myapplication.Telegram.data.TelegramResult;
 
 import java.util.List;
@@ -20,6 +19,7 @@ import java.util.List;
 
 public class MessageAdapter extends BaseAdapter {
 
+    public static final String CHAT_ID = "chatID";
     private List<TelegramResult> messages;
     private Context context;
 
@@ -45,7 +45,7 @@ public class MessageAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        TelegramResult message = messages.get(position);
+        final TelegramResult message = messages.get(position);
         View resultView;
 
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -54,6 +54,14 @@ public class MessageAdapter extends BaseAdapter {
         ((TextView) resultView.findViewById(R.id.textViewName)).setText(message.getMessage().getFrom().getFirst_name() + " " + message.getMessage().getFrom().getLast_name());
         ((TextView) resultView.findViewById(R.id.textViewDate)).setText(String.valueOf(message.getMessage().getDate()));
 
+        resultView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, SendMessageActivity.class);
+                intent.putExtra(CHAT_ID, message.getMessage().getChat().getId());
+                context.startActivity(intent);
+            }
+        });
 
         return resultView;
     }

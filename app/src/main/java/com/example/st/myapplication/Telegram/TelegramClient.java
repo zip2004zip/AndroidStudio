@@ -1,6 +1,7 @@
 package com.example.st.myapplication.Telegram;
 
 import com.example.st.myapplication.Telegram.data.TelegramGetUpdates;
+import com.example.st.myapplication.Telegram.data.TelegramSendMessage;
 import com.google.gson.Gson;
 
 import java.io.IOException;
@@ -18,6 +19,8 @@ public class TelegramClient {
 
     public final static String API_KEY = "172880107:AAEWf0LdTwNt9FkKkAJzodftcHWKHfLZ96w";
     public final static String GETUPDATES_URL = "https://api.telegram.org/bot" + API_KEY +"/getUpdates";
+    public final static String SENDMESSAGE_URL = "https://api.telegram.org/bot" + API_KEY +"/sendmessage";
+
 
     private String get(String url) throws IOException {
         OkHttpClient client = new OkHttpClient();
@@ -35,6 +38,14 @@ public class TelegramClient {
 
         String json = get(GETUPDATES_URL);
         TelegramGetUpdates result = gson.fromJson(json, TelegramGetUpdates.class);
+        return result;
+    }
+
+    public TelegramSendMessage sendMessage(long chat_id, String text) throws IOException {
+        Gson gson = new Gson();
+
+        String json = get(SENDMESSAGE_URL + "?chat_id=" + chat_id + "&" + "text=" + text);
+        TelegramSendMessage result = gson.fromJson(json, TelegramSendMessage.class);
         return result;
     }
 }
