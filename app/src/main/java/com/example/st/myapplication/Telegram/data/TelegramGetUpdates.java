@@ -4,7 +4,6 @@ import java.util.List;
 
 /**
  * Created by st on 12.07.2016.
- *
  */
 
 public class TelegramGetUpdates {
