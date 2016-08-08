@@ -88,6 +88,13 @@
                 android:text="Save File SharPref"
                 android:id="@+id/buttonSaveFileSharMain"
                 android:onClick="onClick" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu Bar"
+                android:id="@+id/buttonMenuBar"
+                android:onClick="onClick" />
         </LinearLayout>
     </ScrollView>
 

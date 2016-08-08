@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.st.myapplication.CalculatorPackage.CalculatorActivity;
 import com.example.st.myapplication.Questionnaire.QuestionnaireActivity;
 import com.example.st.myapplication.Telegram.TelegramActivity;
+import com.example.st.myapplication.headFirstAndroid.menubar.TopLevelActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -87,6 +88,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.buttonSaveFileSharMain:
                 intent = new Intent(this, SaveToSharedPreferencesActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.buttonMenuBar:
+                intent = new Intent(this, TopLevelActivity.class);
                 startActivity(intent);
                 break;
         }

@@ -11,11 +11,6 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/gridLayout"
-        android:layout_alignLeft="@+id/gridLayout"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/gridLayout"
-        android:layout_alignStart="@+id/gridLayout"
         android:orientation="vertical">
 
         <TextView
@@ -31,7 +26,7 @@
 
         <EditText
             android:id="@+id/editText2"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:background="@drawable/calculator_edittext_normal"
@@ -45,17 +40,10 @@
 
     <GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="false"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentTop="false"
-        android:layout_alignWithParentIfMissing="false"
         android:layout_below="@+id/linearLayout"
-        android:layout_centerInParent="true"
         android:columnCount="4"
-        android:columnOrderPreserved="false"
         android:rowCount="5">
 
         <Button

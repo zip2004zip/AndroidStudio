@@ -6,6 +6,13 @@
     <string name="questionnaire_button_send">Отправить</string>
     <string name="radio_button_male">М</string>
     <string name="radio_button_female">Ж</string>
+    <string name="bar_menu_logo">Bar menu logo</string>
+
+    <string-array name="options">
+        <item>Drinks</item>
+        <item>Food</item>
+        <item>Stores</item>
+    </string-array>
 
     <string-array name="citylist">
         <item>Минск</item>

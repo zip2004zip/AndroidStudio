@@ -50,9 +50,9 @@ public class TelegramClient {
         return result;
     }
 
-    public TelegramGetAvatar getAvatar (long user_id){
+    /*public TelegramGetAvatar getAvatar (long user_id){
         Gson gson = new Gson();
 
         String json = get(GETAVATAR_URL + "getFile?")
-    }
+    }*/
 }

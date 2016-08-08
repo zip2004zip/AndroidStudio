@@ -37,7 +37,11 @@
         <activity android:name=".Preference.PreferenceActivity" />
         <activity android:name=".Preference.SaveToPreferenceActivity" />
         <activity android:name=".Adapter.AdapterActivity" />
-        <activity android:name=".Telegram.SendMessageActivity"></activity>
+        <activity android:name=".Telegram.SendMessageActivity" />
+        <activity android:name=".headFirstAndroid.menubar.TopLevelActivity" />
+        <activity android:name=".headFirstAndroid.menubar.DrinkCategoryActivity" />
+        <activity android:name=".headFirstAndroid.menubar.DrinkActivity" />
+        <activity android:name=".headFirstAndroid.stopwatch.StopwatchActivity"></activity>
     </application>
 
 </manifest>

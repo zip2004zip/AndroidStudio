@@ -8,7 +8,8 @@ import com.example.st.myapplication.Telegram.dataAvatarClient.TelegramGetAvatar;
 /**
  * Created by st on 21.07.2016.
  */
-public class AsyncTaskGetAvatar extends AsyncTask<Void, Void, TelegramGetAvatar> {
+
+/*public class AsyncTaskGetAvatar extends AsyncTask<Void, Void, TelegramGetAvatar> {
 
     private Activity activity;
     long user_id;
@@ -25,4 +26,4 @@ public class AsyncTaskGetAvatar extends AsyncTask<Void, Void, TelegramGetAvatar>
 
         return null;
     }
-}
+}*/
