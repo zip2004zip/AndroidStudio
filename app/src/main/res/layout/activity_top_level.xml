@@ -13,7 +13,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/bar_menu_logo"
+        android:src="@drawable/bar_menu"
         android:contentDescription="@string/bar_menu_logo"/>
 
     <ListView
